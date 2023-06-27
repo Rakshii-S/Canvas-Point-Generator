@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Point Generator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div id="title">Canvas Point Generator</div>
+        <a href="docs.html"><div id="docs">Docs</div></a>
+        <div id="mode1" onclick="lightmode()" name="mode1">
+            <img src="images/light.png" alt="light mode" title="Light mode">
+        </div>
+        <div id="mode2" onclick="darkmode()">
+            <img src="images/moon.png" alt="dark mode" title="Dark mode">
+        </div>
+    </header>
+    <main>
+        <section class="section1">
+            <canvas id="canvas" width="700" height="565"></canvas>
+        </section>
+        <section class="section2">
+            <div id="fileM" class="change2">Choose an image</div>
+            <input type="file" id="file" class="change2">
+            <div id="linewidthM" class="change2">Line width size</div>
+            <input type="text" id="linewidth" class="change2">
+            <button id="linewidthS" class="change1" onclick="lineWidth()">Enter</button>
+            <div id="SFColorM" class="change2">Line width color</div>
+            <input type="color" id="SFColor" value="#f9e900" class="change2">
+            <button id="SFColorS" class="change1" onclick="strokeFillColor()">Enter</button>
+
+            <button id="undoPoint" class="change1" onclick="undoPoint()">Undo Point</button>
+            <button id="undoMethod" class="change1" onclick="undoDrawing()">Undo Drawing</button>
+            <button id="clear" class="change1" onclick="clearPoints()">Clear</button><br>
+            <div id="slider1">
+                <button id="line" class="change1" onclick="drawLine()">Line<br>(2-points)</button><br>
+                <button id="curve1" class="change1" onclick="drawCurve1()">Quadratic Bezier Curve<br>(3-points)</button><br>
+                <button id="curve2" class="change1" onclick="drawCurve2()">Cubic Bezier Curve<br>(4-points)</button> 
+                <div id="rightside" onclick="slideright()"><img src="images/right-arrow.png" alt="right arrow" width="25px"></div>   
+            </div>
+            <div id="slider2">
+                <div id="leftside" onclick="slideleft()"><img src="images/left-arrow.png" alt="left arrow" width="25px"></div>
+                <button id="arc" class="change1" onclick="drawCircle()">Arc(Circle, Half-circle etc)<br>(1-point)</button>
+                    <input type="text" id="arcInp1" class="change2">
+                    <input type="text" id="arcInp2" class="change2">
+                    <input type="text" id="arcInp3" class="change2">
+                    <input type="text" id="arcInp4" class="change2">
+                    <button id="arcS" class="change1" onclick="erase1()">Enter</button>
+                <button id="rect" class="change1" onclick="drawRectangle()">Rectangle<br>(1-point)</button>
+                    <input type="text" id="rectInp1" class="change2">
+                    <input type="text" id="rectInp2" class="change2">
+                    <button id="rectS" class="change1" onclick="erase2()">Enter</button>
+            </div>
+        </section>
+        <section class="section3">
+                <textarea id="message1" class="change2">By default line width is 3.</textarea>
+                <textarea id="code" class="change2"></textarea>
+                <button id="copytext" onclick="copyCode()"><img src="images/copy.png" alt="copy" width="20px"></button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>Canvas Point Generator</div>
+        <div>Copyright &copy 2023 </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <script src="basic.js"></script>
+    <script src="pointsGen.js"></script>
+    <script src="redraw.js"></script>
+</body>
+</html>
