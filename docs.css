@@ -78,13 +78,15 @@ main
     height: 300px;
     margin:20px 0px 20px 0px;
     padding: 30px;
-    font-size: 18px;
     background-color: #8c92ac;
     color:black;
 }
 #slides
 {
     display: grid;
+    background-color: #8c92ac;
+    color:black;
+    font-size: 18px;
     margin:0 0 20px 0;
     grid-template-columns: 1200px;
     grid-template-rows:430px;
@@ -120,8 +122,6 @@ main
     width:1370px;
     margin:0px 33px 25px 76px;
     padding: 30px;
-    background-color: #8c92ac;
-    color:black;
     grid-row: 1;
     grid-column: 1;
 }
@@ -132,17 +132,11 @@ main
 #slide1 p,#slide2 p, #slide3 p, #slide4 p, #slide5 p
 {
     margin:-300px 0 0 750px;
+    font-size: 18px;
 }
-#slide1 a,#slide2 a, #slide3 a, #slide4 a, #slide5 a
+.link
 {
     color: blue;
-}
-#part2
-{
-    height: 280px;
-    margin:0px 0px 20px 0px;
-    background-color: #8c92ac;
-    color:black;
 }
 
 /*footer*/

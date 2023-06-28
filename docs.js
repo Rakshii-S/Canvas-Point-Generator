@@ -3,6 +3,17 @@ function lightmode()
     document.body.style.backgroundColor = "white";
     document.getElementById("mode1").style.backgroundColor = "#d0c200";
     document.getElementById("mode2").style.backgroundColor = "#f9e900";
+    document.getElementById("part1").style.backgroundColor = "#8c92ac";
+    document.getElementById("slides").style.backgroundColor = "#8c92ac";
+    document.getElementById("part1").style.color = "black";
+    document.getElementById("slides").style.color = "black";
+    var link = document.getElementsByClassName("link");
+    for(i=0;i<link.length;i++)
+    {
+        link[i].style.color = "white";
+        link[i].style.textDecoration = "underline";
+    }
+    document.getElementById("imageText").src="images/imgl1.png";
 }
 
 function darkmode()
@@ -10,7 +21,24 @@ function darkmode()
     document.body.style.backgroundColor = "#121212";
     document.getElementById("mode1").style.backgroundColor = "#f9e900";
     document.getElementById("mode2").style.backgroundColor = "#d0c200";
+    document.getElementById("part1").style.backgroundColor = "#333b5f";
+    document.getElementById("slides").style.backgroundColor = "#333b5f";
+    document.getElementById("slides").style.color = "white";
+    document.getElementById("part1").style.color = "white";
+    var link = document.getElementsByClassName("link");
+    for(i=0;i<link.length;i++)
+    {
+        link[i].style.color = "white";
+        link[i].style.textDecoration = "underline";
+    }
+    document.getElementById("imageText").src="images/img2.png";
+    document.getElementById("v1").src="videos/line1.mp4";
+    document.getElementById("v2").src="videos/curve11.mp4"
+    document.getElementById("v3").src="videos/curve21.mp4"
+    document.getElementById("v4").src="videos/arc2.mp4"
+    document.getElementById("v5").src="videos/rect2.mp4"
 }
+
 var lb1 = document.getElementById("lb1");
 var lb2 = document.getElementById("lb2");
 var lb3 = document.getElementById("lb3");

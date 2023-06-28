@@ -155,7 +155,7 @@ function clearPoints()
     image.src = " ";
     document.getElementById("SFColor").value = "#f9e900";
     document.getElementById("code").innerHTML =" ";
-    document.getElementById("message1").value =" ";
+    document.getElementById("message1").value ="By default line width is 3.";
     document.getElementById("arcInp1").value =" ";
     document.getElementById("arcInp2").value =" ";
     document.getElementById("arcInp3").value =" ";
