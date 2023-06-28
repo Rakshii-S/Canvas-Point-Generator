@@ -14,7 +14,6 @@ function lightmode()
         link[i].style.textDecoration = "underline";
     }
     document.getElementById("imageText").src="images/imgl1.png";
-    document.getElementById("imageText").src="images/img2.png";
     document.getElementById("v1").src="videos/line.mp4";
     document.getElementById("v2").src="videos/curve1.mp4"
     document.getElementById("v3").src="videos/curve2.mp4"
