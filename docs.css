@@ -8,7 +8,7 @@
 }
 body
 {
-    overflow: hidden;
+    overflow-x: hidden;
     background-color:white;
 }
 
@@ -66,6 +66,83 @@ a
 #home:hover
 {
     background-color:#d0c200;
+}
+
+/*main*/
+main
+{
+    display:grid;
+}
+#part1
+{
+    height: 300px;
+    margin:20px 0px 20px 0px;
+    padding: 30px;
+    font-size: 18px;
+    background-color: #8c92ac;
+    color:black;
+}
+#slides
+{
+    display: grid;
+    margin:0 0 20px 0;
+    grid-template-columns: 1200px;
+    grid-template-rows:430px;
+}
+#lb1, #rb1,#lb2, #rb2,#lb3, #rb3,#lb4, #rb4,#lb5, #rb5
+{
+    position: absolute;
+    padding:10px;
+    width:40px;
+    border-radius: 15px;
+    background-color:rgb(198, 150, 18,0.4);
+    color:white;
+}
+#lb1,#lb2, #rb2,#lb3, #rb3,#lb4, #rb4,#lb5
+{
+    visibility: hidden;
+}
+#lb1:hover, #rb1:hover, #lb2:hover, #rb2:hover, #lb3:hover, #rb3:hover, #lb4:hover, #rb4:hover, #lb5:hover, #rb5:hover
+{
+    background-color: #f9e900;
+}
+#lb1,#lb2,#lb3,#lb4,#lb5
+{
+    margin:140px 0 0 20px;
+}
+#rb1,#rb2,#rb3, #rb4
+{
+    margin:140px 75px 0 1460px;
+}
+#slide1, #slide2, #slide3, #slide4, #slide5
+{
+    height: 430px;
+    width:1370px;
+    margin:0px 33px 25px 76px;
+    padding: 30px;
+    background-color: #8c92ac;
+    color:black;
+    grid-row: 1;
+    grid-column: 1;
+}
+#slide2, #slide3, #slide4, #slide5
+{
+    visibility: hidden;
+}
+#slide1 p,#slide2 p, #slide3 p, #slide4 p, #slide5 p
+{
+    margin:-300px 0 0 750px;
+}
+#slide1 a,#slide2 a, #slide3 a, #slide4 a, #slide5 a
+{
+    color: blue;
+}
+#part2
+{
+    height: 280px;
+    margin:0px 0px 20px 0px;
+    background-color: #8c92ac;
+    color:black;
 }
 
 /*footer*/

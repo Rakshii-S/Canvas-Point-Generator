@@ -101,7 +101,6 @@ function undoPoint()
         }
         // console.log(SFcolorP);
     }
-    console.log(SFcolorP);
     redraw();
     XValues.pop()
     YValues.pop()
@@ -156,5 +155,12 @@ function clearPoints()
     image.src = " ";
     document.getElementById("SFColor").value = "#f9e900";
     document.getElementById("code").innerHTML =" ";
+    document.getElementById("message1").value =" ";
+    document.getElementById("arcInp1").value =" ";
+    document.getElementById("arcInp2").value =" ";
+    document.getElementById("arcInp3").value =" ";
+    document.getElementById("arcInp4").value =" ";
+    document.getElementById("rectInp1").value =" ";
+    document.getElementById("rectInp2").value =" ";
 }
 DisplayImage();

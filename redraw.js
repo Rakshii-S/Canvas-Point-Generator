@@ -117,9 +117,6 @@ function redraw()
 
 function undoDrawing()
 {
-    console.log(rdQueue);
-    console.log(lw);
-    console.log(SFcolor)
     ctx.clearRect(0,0,CanvasElem.width,CanvasElem.height);
     if(rdQueue[rdQueue.length-1] == "line")
     {
@@ -198,18 +195,17 @@ function undoDrawing()
     {
         ctx.drawImage(image,0,0,700,565);
     }
-    for(i=0;i<XValues.length-1;i++)
-    {
-        x = XValues[i];
-        y = YValues[i];
-        sfc = SFcolorP[i];
-        ctx.beginPath();
-        ctx.moveTo(0,0);
-        ctx.arc(x,y,2, 0, 2  * Math.PI);
-        ctx.strokeStyle = sfc;
-        ctx.fillStyle=sfc;
-        ctx.fill();
-    }
-    console.log(SFcolorP);
     redraw();
+    for(i=0;i<XValues.length;i++)
+        {
+            x = XValues[i];
+            y = YValues[i];
+            sfc = SFcolorP[i];
+            ctx.beginPath();
+            ctx.moveTo(0,0);
+            ctx.arc(x,y,2, 0, 2  * Math.PI);
+            ctx.strokeStyle = sfc;
+            ctx.fillStyle=sfc;
+            ctx.fill();
+        }
 }
