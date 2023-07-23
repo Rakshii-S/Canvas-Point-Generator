@@ -10,14 +10,12 @@ function lineWidth()
 {
     lw =  Number(document.getElementById("linewidth").value);
     document.getElementById("linewidth").value = " ";
-    console.log(lw);
 }
 
 //code to accept strokeStyle and fillStyle
 function strokeFillColor()
 {
     SFcolor = document.getElementById("SFColor").value;
-    console.log(SFcolor);
 }
 
 /*code to draw points on canvas for marking*/
@@ -82,14 +80,14 @@ function undoPoint()
 {
     x = XValues[XValues.length-1]
     y = YValues[YValues.length-1]
-    ctx.clearRect(x-3,y-3,5,5);
+    ctx.clearRect(x-3,y-3,5,5)
     //when the image is drawn on the screen
     if(image.src != "")
     {
-        ctx.drawImage(image,0,0,700,565);
+        ctx.drawImage(image,0,0,700,565)
         for(i=0;i<XValues.length-1;i++)
         {
-            x = XValues[i];
+            x = XValues[i]
             y = YValues[i];
             sfc = SFcolorP[i];
             ctx.beginPath();

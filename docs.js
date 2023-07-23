@@ -62,156 +62,120 @@ var slide4 = document.getElementById("slide4");
 var slide5 = document.getElementById("slide5");
 function leftb1()
 {
-    lb1.style.visibility = "hidden";
-    lb2.style.visibility = "hidden";
-    lb3.style.visibility = "hidden";
-    lb4.style.visibility = "hidden";
-    lb5.style.visibility = "hidden";
-    rb1.style.visibility = "visible";
-    rb2.style.visibility = "hidden";
-    rb3.style.visibility = "hidden";
-    rb4.style.visibility = "hidden";
-    slide1.style.visibility = "visible";
-    slide2.style.visibility = "hidden";
-    slide3.style.visibility = "hidden";
-    slide4.style.visibility = "hidden";
-    slide5.style.visibility = "hidden";
+    h = [lb1,lb2,lb3,lb4,lb5,rb2,rb3,rb4,slide2,slide3,slide4,slide5]
+    v = [rb1,slide1]
+    for (i=0;i<h.length;i++)
+    {
+        h[i].style.visibility = "hidden";
+    }
+    for(i=0;i<v.length;i++)
+    {
+        v[i].style.visibility = "visible";
+    }
 }
 function rightb1()
 {
-    lb1.style.visibility = "hidden";
-    lb2.style.visibility = "visible";
-    lb3.style.visibility = "hidden";
-    lb4.style.visibility = "hidden";
-    lb5.style.visibility = "hidden";
-    rb1.style.visibility = "hidden";
-    rb2.style.visibility = "visible";
-    rb3.style.visibility = "hidden";
-    rb4.style.visibility = "hidden";
-    slide1.style.visibility = "hidden";
-    slide2.style.visibility = "visible";
-    slide3.style.visibility = "hidden";
-    slide4.style.visibility = "hidden";
-    slide5.style.visibility = "hidden";
+    h = [lb1,lb3,lb4,lb5,rb1,rb3,rb4,slide1,slide3,slide4,slide5]
+    v = [lb2,rb2,slide2]
+    for (i=0;i<h.length;i++)
+    {
+        h[i].style.visibility = "hidden";
+    }
+    for(i=0;i<v.length;i++)
+    {
+        v[i].style.visibility = "visible";
+    }
 }
 function leftb2()
 {
-    lb1.style.visibility = "hidden";
-    lb2.style.visibility = "hidden";
-    lb3.style.visibility = "hidden";
-    lb4.style.visibility = "hidden";
-    lb5.style.visibility = "hidden";
-    rb1.style.visibility = "visible";
-    rb2.style.visibility = "hidden";
-    rb3.style.visibility = "hidden";
-    rb4.style.visibility = "hidden";
-    slide1.style.visibility = "visible";
-    slide2.style.visibility = "hidden";
-    slide3.style.visibility = "hidden";
-    slide4.style.visibility = "hidden";
-    slide5.style.visibility = "hidden";
+    h = [lb1,lb2,lb3,lb4,lb5,rb2,rb3,rb4,slide2,slide3,slide4,slide5]
+    v = [rb1,slide1]
+    for (i=0;i<h.length;i++)
+    {
+        h[i].style.visibility = "hidden";
+    }
+    for(i=0;i<v.length;i++)
+    {
+        v[i].style.visibility = "visible";
+    }
 }
 function rightb2()
 {
-    lb1.style.visibility = "hidden";
-    lb2.style.visibility = "hidden";
-    lb3.style.visibility = "visible";
-    lb4.style.visibility = "hidden";
-    lb5.style.visibility = "hidden";
-    rb1.style.visibility = "hidden";
-    rb2.style.visibility = "hidden";
-    rb3.style.visibility = "visible";
-    rb4.style.visibility = "hidden";
-    slide1.style.visibility = "hidden";
-    slide2.style.visibility = "hidden";
-    slide3.style.visibility = "visible";
-    slide4.style.visibility = "hidden";
-    slide5.style.visibility = "hidden";
+    h = [lb1,lb2,lb4,lb5,rb1,rb2,rb4,slide1,slide2,slide4,slide5]
+    v = [lb3,rb3,slide3]
+    for (i=0;i<h.length;i++)
+    {
+        h[i].style.visibility = "hidden";
+    }
+    for(i=0;i<v.length;i++)
+    {
+        v[i].style.visibility = "visible";
+    }
 }
 function leftb3()
 {
-    lb1.style.visibility = "hidden";
-    lb2.style.visibility = "visible";
-    lb3.style.visibility = "hidden";
-    lb4.style.visibility = "hidden";
-    lb5.style.visibility = "hidden";
-    rb1.style.visibility = "hidden";
-    rb2.style.visibility = "visible";
-    rb3.style.visibility = "hidden";
-    rb4.style.visibility = "hidden";
-    slide1.style.visibility = "hidden";
-    slide2.style.visibility = "visible";
-    slide3.style.visibility = "hidden";
-    slide4.style.visibility = "hidden";
-    slide5.style.visibility = "hidden";
+    h = [lb1,lb3,lb4,lb5,rb2,rb1,rb4,slide1,slide3,slide4,slide5]
+    v = [lb2,rb3,slide2]
+    for (i=0;i<h.length;i++)
+    {
+        h[i].style.visibility = "hidden";
+    }
+    for(i=0;i<v.length;i++)
+    {
+        v[i].style.visibility = "visible";
+    }
 }
 function rightb3()
 {
-    lb1.style.visibility = "hidden";
-    lb2.style.visibility = "hidden";
-    lb3.style.visibility = "hidden";
-    lb4.style.visibility = "visible";
-    lb5.style.visibility = "hidden";
-    rb1.style.visibility = "hidden";
-    rb2.style.visibility = "hidden";
-    rb3.style.visibility = "hidden";
-    rb4.style.visibility = "visible";
-    slide1.style.visibility = "hidden";
-    slide2.style.visibility = "hidden";
-    slide3.style.visibility = "hidden";
-    slide4.style.visibility = "visible";
-    slide5.style.visibility = "hidden";
+    h = [lb1,lb2,lb3,lb5,rb2,rb3,rb1,slide2,slide3,slide1,slide5]
+    v = [lb4,rb4,slide4]
+    for (i=0;i<h.length;i++)
+    {
+        h[i].style.visibility = "hidden";
+    }
+    for(i=0;i<v.length;i++)
+    {
+        v[i].style.visibility = "visible";
+    }
 }
 function leftb4()
 {
-    lb1.style.visibility = "hidden";
-    lb2.style.visibility = "hidden";
-    lb3.style.visibility = "visible";
-    lb4.style.visibility = "hidden";
-    lb5.style.visibility = "hidden";
-    rb1.style.visibility = "hidden";
-    rb2.style.visibility = "hidden";
-    rb3.style.visibility = "visible";
-    rb4.style.visibility = "hidden";
-    slide1.style.visibility = "hidden";
-    slide2.style.visibility = "hidden";
-    slide3.style.visibility = "visible";
-    slide4.style.visibility = "hidden";
-    slide5.style.visibility = "hidden";
+    h = [lb1,lb2,lb4,lb5,rb2,rb1,rb4,slide2,slide1,slide4,slide5]
+    v = [lb3,rb3,slide3]
+    for (i=0;i<h.length;i++)
+    {
+        h[i].style.visibility = "hidden";
+    }
+    for(i=0;i<v.length;i++)
+    {
+        v[i].style.visibility = "visible";
+    }
 }
 function rightb4()
 {
-    lb1.style.visibility = "hidden";
-    lb2.style.visibility = "hidden";
-    lb3.style.visibility = "hidden";
-    lb4.style.visibility = "hidden";
-    lb5.style.visibility = "visible";
-    rb1.style.visibility = "hidden";
-    rb2.style.visibility = "hidden";
-    rb3.style.visibility = "hidden";
-    rb4.style.visibility = "hidden";
-    slide1.style.visibility = "hidden";
-    slide2.style.visibility = "hidden";
-    slide3.style.visibility = "hidden";
-    slide4.style.visibility = "hidden";
-    slide5.style.visibility = "visible";
+    h = [lb1,lb2,lb3,lb4,rb1,rb2,rb3,rb4,slide2,slide3,slide4,slide1]
+    v = [lb5,slide5]
+    for (i=0;i<h.length;i++)
+    {
+        h[i].style.visibility = "hidden";
+    }
+    for(i=0;i<v.length;i++)
+    {
+        v[i].style.visibility = "visible";
+    }
 }
 function leftb5()
 {
-    lb1.style.visibility = "hidden";
-    lb2.style.visibility = "hidden";
-    lb3.style.visibility = "hidden";
-    lb4.style.visibility = "visible";
-    lb5.style.visibility = "hidden";
-    rb1.style.visibility = "hidden";
-    rb2.style.visibility = "hidden";
-    rb3.style.visibility = "hidden";
-    rb4.style.visibility = "visible";
-    slide1.style.visibility = "hidden";
-    slide2.style.visibility = "hidden";
-    slide3.style.visibility = "hidden";
-    slide4.style.visibility = "visible";
-    slide5.style.visibility = "hidden";
+    h = [lb1,lb2,lb3,lb5,rb1,rb2,rb3,slide1,slide2,slide3,slide5]
+    v = [lb4,rb4,slide4]
+    for (i=0;i<h.length;i++)
+    {
+        h[i].style.visibility = "hidden";
+    }
+    for(i=0;i<v.length;i++)
+    {
+        v[i].style.visibility = "visible";
+    }
 }
 video = document.getElementsByClassName("video");
 for(i=0;i<video.length;i++)
