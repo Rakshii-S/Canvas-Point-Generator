@@ -58,20 +58,18 @@ function drawLine()
         ctx.strokeStyle = SFcolor;
         ctx.stroke();
         ctx.closePath();
-        lineX.push(x1);
-        lineY.push(y1);
-        lineX.push(x2);
-        lineY.push(y2);
-        XValues.pop();
-        YValues.pop();
-        XValues.pop();
-        YValues.pop();
-        SFcolorP.pop();
-        SFcolorP.pop();
+        lineX.push(x1,x2);
+        lineY.push(y1,y2);
+        for(i=0;i<=1;i++)
+        {
+            XValues.pop();
+            YValues.pop();
+            SFcolorP.pop();
+        }
         lwL.push(lw);
         SFColorL.push(SFcolor);
         redraw();
-        document.getElementById("code").innerHTML = Code;
+        document.getElementById("code").innerHTML = Code.join(" ");
         rdQueue.push("line");
         document.getElementById("message1").value="By default line width is 3."
     }
@@ -105,25 +103,18 @@ function drawCurve1()
         ctx.quadraticCurveTo(x2,y2,x3,y3);
         ctx.stroke();
         ctx.closePath();
-        curve1X.push(x1);
-        curve1Y.push(y1);
-        curve1X.push(x2);
-        curve1Y.push(y2);
-        curve1X.push(x3);
-        curve1Y.push(y3);
-        XValues.pop()
-        YValues.pop()
-        XValues.pop()
-        YValues.pop()
-        XValues.pop()
-        YValues.pop()
-        SFcolorP.pop();
-        SFcolorP.pop();
-        SFcolorP.pop();
+        curve1X.push(x1,x2,x3);
+        curve1Y.push(y1,y2,y3);
+        for(i=0;i<=2;i++)
+        {
+            XValues.pop();
+            YValues.pop();
+            SFcolorP.pop();
+        }
         lwc1.push(lw);
         SFColorc1.push(SFcolor);
         redraw();
-        document.getElementById("code").innerHTML = Code;
+        document.getElementById("code").innerHTML = Code.join(" ");
         rdQueue.push("curve1")
         document.getElementById("message1").value="By default line width is 3."
     }
@@ -136,7 +127,7 @@ function drawCurve1()
 /*arc code*/
 function drawCircle()
 {
-    document.getElementById("message1").value="Circle ==> Start angle: 0,\tEnd angle: 3.1416.\nHalf circle ==> Start angle: 0,\tEnd angle: 6.2832.\nCounterClockwise ==> true/false\tor\t1/0."
+    document.getElementById("message1").value="Circle ==> Start angle: 0,\tEnd angle: 6.2832.\nHalf circle ==> Start angle: 0,\tEnd angle: 3.1416.\nCounterClockwise ==> true/false\tor\t1/0."
     c = XValues[XValues.length-2]
     x = XValues[XValues.length-1]
     y = YValues[YValues.length-1]
@@ -156,10 +147,11 @@ function drawCircle()
         {
             document.getElementById("arc").innerHTML="Arc(Circle, Half-circle etc)<br>(1-point)";
             document.getElementById("arc").style.textAlign="center";
-            document.getElementById("arcInp1").value=" ";
-            document.getElementById("arcInp2").value=" ";
-            document.getElementById("arcInp3").value=" ";
-            document.getElementById("arcInp4").value=" ";
+            emptyVal = ["arcInp1","arcInp2","arcInp3","arcInp4"]
+            for(i=0;i<=emptyVal.length;i++)
+            {
+                document.getElementById(emptyVal[i]).value=" ";
+            }
             Code.push("ctx.beginPath();\nctx.lineWidth="+lw+";\nctx.strokeStyle="+SFcolor+";\nctx.arc("+x+","+y+","+radius+","+SAngle+","+EAngle+","+counterclockwise+");\nctx.stroke();\nctx.closePath();\n");
             ctx.clearRect(x-3,y-3,5,5);
             ifImageDrawn();
@@ -181,7 +173,7 @@ function drawCircle()
             lwA.push(lw);
             SFColorA.push(SFcolor);
             redraw();
-            document.getElementById("code").innerHTML = Code;
+            document.getElementById("code").innerHTML = Code.join(" ");
             Control=false
             rdQueue.push("circle");
             document.getElementById("message1").value="By default line width is 3."
@@ -220,30 +212,18 @@ function drawCurve2()
         ctx.bezierCurveTo(x2,y2,x3,y3,x4,y4);
         ctx.stroke();
         ctx.closePath();
-        curve2X.push(x1);
-        curve2Y.push(y1);
-        curve2X.push(x2);
-        curve2Y.push(y2);
-        curve2X.push(x3);
-        curve2Y.push(y3);
-        curve2X.push(x4);
-        curve2Y.push(y4);
-        XValues.pop()
-        YValues.pop()
-        XValues.pop()
-        YValues.pop()
-        XValues.pop()
-        YValues.pop()
-        XValues.pop()
-        YValues.pop()
-        SFcolorP.pop();
-        SFcolorP.pop();
-        SFcolorP.pop();
-        SFcolorP.pop();
+        curve2X.push(x1,x2,x3,x4);
+        curve2Y.push(y1,y2,y3,y4);
+        for(i=0;i<=3;i++)
+        {
+            XValues.pop();
+            YValues.pop();
+            SFcolorP.pop();
+        }
         lwc2.push(lw);
         SFColorc2.push(SFcolor);
         redraw();
-        document.getElementById("code").innerHTML = Code;
+        document.getElementById("code").innerHTML = Code.join(" ");
         rdQueue.push("curve2");
         document.getElementById("message1").value="By default line width is 3."
     }
@@ -292,7 +272,7 @@ function drawRectangle()
             lwR.push(lw);
             SFColorR.push(SFcolor);
             redraw();
-            document.getElementById("code").innerHTML = Code;
+            document.getElementById("code").innerHTML = Code.join(" ");
             Control=false
             rdQueue.push("rectangle")
             document.getElementById("message1").value="By default line width is 3."

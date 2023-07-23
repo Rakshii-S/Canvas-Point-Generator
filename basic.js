@@ -154,11 +154,10 @@ function clearPoints()
     document.getElementById("SFColor").value = "#f9e900";
     document.getElementById("code").innerHTML =" ";
     document.getElementById("message1").value ="By default line width is 3.";
-    document.getElementById("arcInp1").value =" ";
-    document.getElementById("arcInp2").value =" ";
-    document.getElementById("arcInp3").value =" ";
-    document.getElementById("arcInp4").value =" ";
-    document.getElementById("rectInp1").value =" ";
-    document.getElementById("rectInp2").value =" ";
+    emptyVal = ["arcInp1","arcInp2","arcInp3","arcInp4","rectInp1","rectInp2"]
+    for(i=0;i<=emptyVal.length;i++)
+    {
+        document.getElementById(emptyVal[i]).value=" ";
+    }
 }
 DisplayImage();
