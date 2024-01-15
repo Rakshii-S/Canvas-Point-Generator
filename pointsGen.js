@@ -148,10 +148,10 @@ function drawCircle()
             document.getElementById("arc").innerHTML="Arc(Circle, Half-circle etc)<br>(1-point)";
             document.getElementById("arc").style.textAlign="center";
             emptyVal = ["arcInp1","arcInp2","arcInp3","arcInp4"]
-            for(i=0;i<=emptyVal.length;i++)
-            {
-                document.getElementById(emptyVal[i]).value=" ";
-            }
+            // for(i=0;i<=emptyVal.length;i++)
+            // {
+            //     document.getElementById(emptyVal[i]).value= "";
+            // }
             Code.push("ctx.beginPath();\nctx.lineWidth="+lw+";\nctx.strokeStyle="+SFcolor+";\nctx.arc("+x+","+y+","+radius+","+SAngle+","+EAngle+","+counterclockwise+");\nctx.stroke();\nctx.closePath();\n");
             ctx.clearRect(x-3,y-3,5,5);
             ifImageDrawn();
