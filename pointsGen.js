@@ -335,4 +335,5 @@ function erase2()
         document.getElementById("rect").innerHTML="Rectangle<br>(1-point)";
         document.getElementById("rect").style.textAlign="center";
     }
+    
 }
