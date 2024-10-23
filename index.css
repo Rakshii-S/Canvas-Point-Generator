@@ -333,7 +333,7 @@ main
     margin:10px;
     display: grid;
     width:31%;
-    grid-template-rows:100px 485px;
+    grid-template-rows:83px 485px;
 }
 #message1
 {
@@ -375,10 +375,11 @@ main
 /*footer*/
 footer
 {
+    margin-top:-12px;
     background-color: #f9e900;
     color:black;
     font-weight: bold;
-    font-size:13px;
+    font-size:12px;
     height:55px;
     width:100%;
     text-align: center;
